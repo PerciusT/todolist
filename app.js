@@ -162,7 +162,7 @@ app.post('/:id',function(req,res){
 	res.redirect('/'+req.params.id)
 })
 //PORT
-app.listen(3000, function(){
+app.listen(process.env.PORT||3000, function(){
 	console.log("Listening on 3000");
 })
 process.on('SIGTERM', () => {
